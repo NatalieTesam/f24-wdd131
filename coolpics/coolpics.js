@@ -9,11 +9,13 @@ function toggleMenu() {
 menuButton.addEventListener("click", toggleMenu);
 
 function handleResize() {
-    if (window.innerWidth > 700) {
-        document.querySelector(".menu").classList.remove("hide");
+    if (window.innerWidth > 750) {
+        document.querySelector(".menu").classList.remove("hide")
+        document.querySelector(".menu-button").classList.add("hide");
     }
     else {
         document.querySelector(".menu").classList.add("hide");
+        document.querySelector(".menu-button").classList.remove("hide")
     }
 }
 window.addEventListener("resize", handleResize)
@@ -28,17 +30,17 @@ function viewerTemplate(image, alt) {
 
 function viewHandler(event) {
     const element = event.target;
-    const image = element.getAttribute("src").split("-")[0] + "-full.jpeg";
-    const alt = element.getAttribute("alt");
-    const viewer = viewerTemplate(image, alt);
-    document.body.insertAdjacentHTML("afterbegin", viewer);
-}
+    const image = element.target.src.split("-");
+    const imgSrc = image[0] + "-full.jpeg";
+    document.body.insertAdjacentHTML("afterbegin", viewerTemplate(imgSrc, target.alt));
 
+    document.querySelector(".close-viewer").addEventListener("click", closeViewer);
+}
 document.querySelector(".close-viewer").addEventListener("click", closeViewer);
 
 function closeViewer() {
-    document.querySelector(".viewer").remove();
+    document.querySelector(".viewer")?.remove();
 }
 
-document.querySelectorAll(img).addEventListener("click", viewHandler());
+document.querySelectorAll(img).addEventListener("click", viewHandler);
 
