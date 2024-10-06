@@ -25,6 +25,18 @@ header {
     padding: 0.5rem;
 }
 
+.skiptocontent a {
+    position: absolute;
+    top: -40px;
+    justify-content: left;
+    background-color: var(--red-color0);
+    color: var(--gold-color);
+}
+.skiptocontent a:focus {
+    top:0;
+	/* Move it back on when focused */
+}
+
 h1 {
     text-align: center;
     font-family: var(--headline-font);
@@ -83,7 +95,7 @@ h3 {
 }
 
 .info li {
-    padding: 0.5em;
+    padding: 0.25em 0.5em;
 }
 
 .right-column {
