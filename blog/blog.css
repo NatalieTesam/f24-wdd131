@@ -103,6 +103,10 @@ img {
     margin: auto
 }
 
+.right-column p a {
+    font-weight: bold;
+}
+
 .filter {
     border: 2px solid var(--gold-color);
     padding: 2em;
