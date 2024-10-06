@@ -73,6 +73,13 @@ main {
 
 .book-reviews {
     display: grid;
+    grid-template-columns: auto;
+    gap: 1em;
+    margin: 0.5em;
+}
+
+.entry {
+    display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 1em;
     margin: 0.5em;

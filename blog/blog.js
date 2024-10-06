@@ -25,3 +25,24 @@ const articles = [
 		stars: '⭐⭐⭐⭐'
 	}
 ]
+const reviewsHtml = document.querySelector(".book-reviews")
+
+articles.forEach(element => {
+	const elementHtml = 
+	`<section class="entry">
+		<section class="right-column">
+			<h2>${element.title}</h2>
+			<img src=${element.imgSrc} alt="${element.imgAlt}">
+			<p>${element.description} <a href="#">Read More...</a></p>
+		</section>
+		<section class="left-column">
+			<h3>${element.date}</h3>
+			<ul class="info">
+				<li>${element.ages}</li>
+				<li>${element.genre}</li>
+				<li>${element.stars}</li>
+			</ul> 
+		</section>
+	<section>`
+	reviewsHtml.insertAdjacentHTML("beforeend", elementHtml)
+});
