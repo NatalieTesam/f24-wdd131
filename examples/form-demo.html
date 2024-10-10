@@ -1,0 +1,40 @@
+<!-- form-demo.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Form</title>
+    <link rel="stylesheet" href="form-demo.css" />
+    <script src="scripts/form-demo.js" defer></script>
+  </head>
+  <body>
+    <header><h1>Checkout</h1></header>
+    <main>
+      <section class="errors"></section>
+      <form id="checkoutForm" class="checkout" action="completed.html">
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" required>
+        <label for="email">Email:</label>
+        <input type="text" id="email" required>
+        <label for="address">Address:</label>
+        <textarea name="address" id="address" required></textarea>
+        <label for="payment-method">Payment Method:</label>
+        <select name="payment-method" id="payment-method" required>
+            <option value="">Select One</option>
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+        </select>
+        <p class="" id="credit-card-container">
+            <label for="credit-card">Credit Card Number:</label>
+            <input type="number" id="credit-card" name="credit-card" required pattern="[0-9]{16}">
+        </p>
+        <p class="" id="paypal-container">
+            <label for="paypal">PayPal Username:</label>
+            <input type="text" id="paypal" name="paypal" required>
+        </p>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
