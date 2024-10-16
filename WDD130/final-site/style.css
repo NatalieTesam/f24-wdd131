@@ -1,0 +1,321 @@
+@import url(https://fonts.googleapis.com/css2?family=Gabriela&family=Quattrocento+Sans&family=Roboto&family=Shadows+Into+Light+Two&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #d0b8ff;
+  font-family: "Open Sans", sans-serif;
+  padding: 2px 25px;
+  font-size: 18px;
+  margin: 0;
+  padding: 2px 25px;;
+}
+
+.content {
+  background-color: white;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Shadows Into Light Two", "Brush Script MT", cursive;
+  color: #6134bb;
+}
+h2 {
+  font-size: 32px;
+}
+h3 {
+  font-size: 1.3em;
+}
+
+img {
+  max-width: 100%;
+}
+
+p, input, label, textarea, button {
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-size: 1.1em;
+}
+
+header {
+  background-color: #9270D7;
+  display: grid;
+  grid-template-rows: 175px 60px;
+  grid-template-columns: 175px auto;
+}
+
+.logo {
+  border: solid #9270D7;
+}
+
+header ul {
+  grid-row: 2 / 3;
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  list-style: none;
+  border: solid #9270D7;
+  gap: 2px;
+}
+
+header li {
+  text-align: center;
+  padding: 10px 10px;
+  background-color: #87B37A;
+}
+
+header li a {
+  color: white;
+}
+
+main {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto;
+  margin: 3em;
+}
+main img {
+  box-shadow: 0 0 7px #808080;
+}
+.first-home-section {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  border-top: solid;
+  border-bottom: solid;
+  padding: 1em;
+  padding-bottom: 2em;
+  border-color: #9270D7;
+}
+.first-home-section h2 {
+  grid-area: 1 / 1 / 2 / 2;
+  padding: 0.5em 0em;
+}
+.first-home-section p {
+  grid-area: 2 / 1 / 3 / 2;
+  padding: 1em;
+  border-top: solid;
+  border-bottom: solid;
+  margin: 0 1em;
+  border-color: #9270D7;
+}
+.first-home-section img {
+  grid-area: 1 / 2 / 3 / 3;
+}
+
+.second-home-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  margin: 2em;
+}
+.second-home-section p {
+  grid-area: 2 / 1 / 3 / 4;
+  text-align: center;
+  padding-bottom: 3em;
+}
+.realtor {
+  display: grid;
+  grid-template-rows: auto auto;
+  margin: 1.5em;
+  text-align: center;
+}
+
+.third-home-section {
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-template-rows: auto auto auto;
+  border-top: solid;
+  border-bottom: solid;
+  border-color: #9270D7;
+  padding: 2em;
+  padding-bottom: 3em;
+}
+
+.third-home-section img {
+  grid-area: 1 / 1 / 4 / 2;
+  margin: auto 0;
+}
+.third-home-section h2 {
+  grid-area: 1 / 2 / 2 / 3;
+  padding: 0 1em;
+}
+.third-home-section p {
+  grid-area: 2 / 2 / 3 / 3;
+  padding: 0 1em;
+  margin: 0 1em;
+}
+.third-home-section h4 {
+  grid-area: 3 / 2 / 4 / 3;
+  text-align: right;
+  margin: 1em 2em;
+}
+
+.current-hot-listings {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 2em;
+  margin: 3em;
+}
+.hot-listings-title {
+  padding: 0.5em;
+  padding-left: 2em;
+  border-top: solid;
+  border-bottom: solid;
+  margin: 0 1em;
+  border-color: #9270D7;
+}
+.hot-listing h3 {
+  padding: 0.5em 0;
+}
+.hot-listing p {
+  padding-left: 5px;
+}
+.all-listings-title {
+  padding: 0.5em;
+  padding-right: 2em;
+  text-align: right;
+  border-top: solid;
+  border-bottom: solid;
+  border-color: #9270D7;
+}
+.all-listings {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  margin: 3em;
+  gap: 1.5em;
+}
+.listing {
+  padding-bottom: 1.5em;
+}
+.listing h3 {
+  padding: 0.5em 0;
+}
+.information h2 {
+  padding: 0.5em;
+  padding-left: 2em;
+  border-top: solid;
+  border-bottom: solid;
+  border-color: #9270D7;
+  margin-bottom: 1.5em;
+}
+.information p {
+  padding: 1.5em;
+  padding-top: 0;
+}
+
+.review {
+  border: solid;
+  border-color: #9270D7;
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  grid-template-rows: 1fr 4fr;
+  padding: 2em;
+  gap: 1em;
+  margin: 1em;
+}
+.review h4 {
+  grid-area: 1 / 1 / 2 / 3;
+  font-size: 2em;
+  font-family: "Shadows Into Light Two", "Brush Script MT", cursive;
+  border-bottom: solid;
+  border-color: #9270D7;
+  padding-left: 0.5em;
+}
+.review .critic {
+  grid-area: 1 / 2 / 2 / 3;
+  text-align: right;
+}
+.review .rev {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.review img {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.write-review h2 {
+  border-top: solid;
+  border-color: #9270D7;
+  padding: 0.5em 1em 0.5em 2em;
+}
+
+form {
+  margin: 0 auto;
+  max-width: 80%;
+  padding: 1em;
+  border: solid #9270D7;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display:grid;
+  grid-template-columns: auto auto;
+}
+form li {
+  margin: 1em;
+}
+label {
+  display: inline-block;
+  width: auto;
+  text-align: right;
+}
+form input {
+  width: 80%;
+  font-size: 15px;
+  padding: 10px;
+  border: solid #9270D7;
+}
+form textarea {
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  padding: 12px;
+  border: solid #9270D7;
+  
+}
+#message-id {
+  border-top: solid #9270D7;
+  grid-area: 2 / 1 / 3 / 3;
+  padding: 1em;
+}
+#button {
+  grid-area: 3 / 1 / 4 / 3;
+  margin: 2em auto auto auto;
+}
+#review {
+  padding: 5px 10px;
+  background-color: #CBF0BC;
+  border: solid #87B37A;
+}
+
+
+
+
+
+footer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: #9270D7;
+  align-items: center;
+  padding: 0.8%;
+}
+footer h3 {
+  color: white;
+}
+footer p {
+  color: white;
+  padding: 0px 10px;
+}
+footer .social {
+  margin-left: auto;
+}
+footer .social img {
+  margin-left: 5px;
+}
