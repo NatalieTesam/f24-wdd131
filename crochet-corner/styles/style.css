@@ -67,6 +67,20 @@ header {
   padding: 10px;
 }
 
+.viewer {
+  display: none;
+  padding-top: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: block;
+  color: #FFF;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
 nav {
   background-color: var(--nav-background-color);
   padding: 0 10%;
@@ -88,12 +102,6 @@ nav a {
 nav a:hover {
   color: var(--nav-hover-link-color);
   background-color: var(--nav-hover-background-color);
-}
-
-.navigation {
-  position: sticky;
-  top: 0;
-  overflow: hidden;
 }
 
 main {
@@ -119,7 +127,7 @@ main {
   align-content: center;
   justify-content: center;
   width: 100%;
-  height: 300px;
+  max-height: 300px;
   grid-area: 1 / 1 / 2 / 3;
   margin: 0 auto;
 }
@@ -142,6 +150,14 @@ main {
 #welcome-section p {
   grid-area: 3 / 2 / 4 / 3;
   max-width: 90%;
+}
+
+.gallery img {
+  max-width: 100%;
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  margin: auto;
 }
 
 #popular-patterns-section {
@@ -171,7 +187,13 @@ main {
 }
 
 .home-page-pattern-card img {
-  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  align-content: center;
+  justify-content: center;
+  max-width: 250px;
+  height: 250px;
+  max-height: 250px;
   box-shadow: 0 0 7px #808080;
 }
 
@@ -302,4 +324,88 @@ footer .social img {
 .pattern-card p {
   margin: 0 1em;
   text-align: center;
+}
+
+.patternCardViewer {
+  display: none;
+  padding-top: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: block;
+  color: #FFF;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.close-viewer {
+  color: #FFF;
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+}
+
+.viewer-image {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  padding-top: 50px;
+}
+
+@media screen and (max-width: 700px) {
+  #home-page-pattern-output {
+    grid-template-columns: 1fr;
+  }
+  
+  .home-page-pattern-card {
+    padding: 1em;
+  }
+  
+  #welcome-section {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+  }
+  .help-section {
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  }
+
+  nav {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  #patterns-section-output {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+
+  #home-page-pattern-output {
+    grid-template-columns: 1fr;
+  }
+  
+  .home-page-pattern-card {
+    padding: 1em;
+  }
+  
+  #welcome-section {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  #patterns-section-output {
+    grid-template-columns: 1fr 1fr;
+  }
 }
