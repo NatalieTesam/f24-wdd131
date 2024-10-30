@@ -358,6 +358,20 @@ footer .social img {
   padding-top: 50px;
 }
 
+.pattern-image {
+  width: 80%;
+}
+
+.pattern-info {
+  display: grid;
+  grid-template: auto;
+  grid-gap: 1em;
+  align-content: center;
+  box-shadow: 0 0 7px #808080;
+  padding: 1em 2em 1em 2em;
+  margin: 1em;
+}
+
 @media screen and (max-width: 700px) {
   #home-page-pattern-output {
     grid-template-columns: 1fr;

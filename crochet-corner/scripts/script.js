@@ -190,6 +190,8 @@ function viewHandler() {
   patternCard = event.target.closest(".pattern-card");
   patternName = patternCard.querySelector("h3").textContent;
   // checks between json elements to find the pattern that matches the pattern card's h3 that was clicked on
+
+  const pattern = patterns.find((p) => p.name == name);
   patterns.forEach(element => {
     // patterns.find((item) => item.id == id)
     if (element.name == patternName) {
@@ -222,9 +224,11 @@ const patternsSection = document.getElementById("patterns-section-output");
 // populates the patterns page with cards
 patterns.forEach(element => {
   const template = `<div class="pattern-card">
-              <img src=${element.image} alt=${element.imageAlt} />
-              <h3>${element.name}</h3>
-              <p>${element.difficulty}</p>
+              <a href="pattern.html?patternName=${element.name}">
+                <img src=${element.image} alt=${element.imageAlt} />
+                <h3>${element.name}</h3>
+                <p>${element.difficulty}</p>
+              </a>
           </div>`;
 
   patternsSection.insertAdjacentHTML("beforeend", template);
