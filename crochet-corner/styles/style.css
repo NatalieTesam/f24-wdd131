@@ -34,6 +34,18 @@ body {
   font-size: 20px;
 }
 
+.skiptocontent a {
+  position: absolute;
+  top: -40px;
+  justify-content: left;
+  background-color: var(--red-color0);
+  color: var(--gold-color);
+}
+.skiptocontent a:focus {
+  top:0;
+/* Move it back on when focused */
+}
+
 h1,
 h2,
 h3,
