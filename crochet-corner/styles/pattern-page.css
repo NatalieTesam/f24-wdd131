@@ -1,0 +1,13 @@
+.pattern-info {
+    display: grid;
+    grid-template: auto;
+    grid-gap: 1em;
+    align-content: center;
+    box-shadow: 0 0 7px #808080;
+    padding: 1em 2em 1em 2em;
+    margin: 1em;
+  }
+  
+  .pattern-image {
+    width: 50%;
+  }
