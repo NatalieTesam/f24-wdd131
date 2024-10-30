@@ -191,7 +191,7 @@ function viewHandler() {
   patternName = patternCard.querySelector("h3").textContent;
   // checks between json elements to find the pattern that matches the pattern card's h3 that was clicked on
 
-  const pattern = patterns.find((p) => p.name == name);
+  
   patterns.forEach(element => {
     // patterns.find((item) => item.id == id)
     if (element.name == patternName) {
@@ -237,7 +237,7 @@ patterns.forEach(element => {
 // selects all pattern cards
 const patternCards = document.querySelectorAll(".pattern-card");
 
-// adds a click listener to all the pattern card elements
-patternCards.forEach(element => {
-  element.addEventListener("click", viewHandler);
-});
+// // adds a click listener to all the pattern card elements
+// patternCards.forEach(element => {
+//   element.addEventListener("click", viewHandler);
+// });

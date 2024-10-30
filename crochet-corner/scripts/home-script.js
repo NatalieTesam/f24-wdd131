@@ -180,9 +180,11 @@ ratingSorted.forEach((element, index) => {
     // create home-page-pattern-card
     const template = 
     `<div class="home-page-pattern-card">
+        <a href="pattern.html?patternName=${element.name}">
         <img src=${element.image} alt=${element.imageAlt} />
         <h3>${element.name}</h3>
         <p>Rating: ${element.rating}</p>
+        </a>
       </div>`;
     homePatternsSection.insertAdjacentHTML("beforeend", template);
   };
